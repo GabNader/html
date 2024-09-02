@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem Dinâmica</h1>
+    <p>Aumente e diminua o tamanho do seu navegador</p>  
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+    </picture>
+    <p>para criar essa imagem mutável, foi necessário criar as 3 imagens com diferentes tamanhos dentro do gimp, depois, na tag picture, colocar source media type, e ir ou da maior pra menor, ou da menor pra maior, em ordem. </p>
+    <p>nessa aqui, eu coloquei a imagem como a "foto g", mas coloquei que a max-width é o tamanho dela (1050px), e coloquei a imagem média. Depois fiz o mesmo entre a imagem média e a imagem pequena. </p>
+    <h1>Áudios em HTML5</h1>
+    <p>Vamos aprender como inserir áudios</p>
+    <p>No exemplo abaixo, apenas criei a tag audio, coloquei o endereço do áudio no src, e depois coloquei "controls autoplay"</p>
+    <audio src="midia/happy-mistake.mp3" controls autoplay></audio>
+    <p>também é possível abrir áudio, e dentro dele criar a tag source, e depois em type "audio/wav</p>
+    <audio preload="metadata" autoplay controls>
+        <source src="midia/guanacast-33.mp3" type="audio/wav">
+        <p>Caso seu navegador não conseguir reproduzir o áudio, clique aqui para baixar <a href="midia/guanacast-33.mp3"></a></p>
+    </audio>
+</body>
+</html>
